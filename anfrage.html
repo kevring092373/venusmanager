@@ -42,7 +42,10 @@
     </section>
 
     <section class="section section--compact">
-      <div class="container container--narrow">
+      <div class="container container--narrow" id="anfrage-container">
+        <div id="anfrage-success" class="hidden" role="status" aria-live="polite">
+          <p class="text-large">Vielen Dank für deine Anfrage. Wir melden uns in Kürze bei dir.</p>
+        </div>
         <form class="form-submit" name="anfrage" method="post" data-netlify="true" netlify-honeypot="website" id="anfrage-form">
           <input type="hidden" name="form-name" value="anfrage">
           <input type="hidden" name="subject" value="Neue Anfrage – Venus Manager">
@@ -132,5 +135,39 @@
     </div>
   </footer>
   <script src="js/main.js"></script>
+  <script>
+    (function () {
+      var form = document.getElementById('anfrage-form');
+      var successEl = document.getElementById('anfrage-success');
+      if (!form || !successEl) return;
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var submitBtn = form.querySelector('button[type="submit"]');
+        var originalText = submitBtn ? submitBtn.textContent : '';
+        if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Wird gesendet …'; }
+        var action = form.getAttribute('action') || window.location.href;
+        var formData = new FormData(form);
+        var body = new URLSearchParams(formData).toString();
+        fetch(action, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: body
+        })
+          .then(function (res) {
+            if (res.ok) {
+              form.classList.add('hidden');
+              successEl.classList.remove('hidden');
+            } else {
+              if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = originalText; }
+              alert('Beim Senden ist ein Fehler aufgetreten. Bitte versuche es später erneut.');
+            }
+          })
+          .catch(function () {
+            if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = originalText; }
+            alert('Beim Senden ist ein Fehler aufgetreten. Bitte versuche es später erneut.');
+          });
+      });
+    })();
+  </script>
 </body>
 </html>
