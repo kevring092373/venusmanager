@@ -982,6 +982,34 @@
   margin-top: var(--space-xl);
 }
 
+/* Anfrage-Seite: kompakter, Button ohne Scrollen sichtbar */
+.page-header--compact {
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-lg);
+}
+.section--compact {
+  padding-top: var(--space-lg);
+  padding-bottom: var(--space-2xl);
+}
+.section--compact .form-group {
+  margin-bottom: var(--space-md);
+}
+.section--compact .form-submit {
+  margin-top: var(--space-lg);
+}
+.section--compact .form-group textarea {
+  min-height: 90px;
+}
+@media (max-width: 600px) {
+  .page-header--compact {
+    padding-top: var(--space-lg);
+    padding-bottom: var(--space-md);
+  }
+  .section--compact {
+    padding-top: var(--space-md);
+  }
+}
+
 /* Blog Grid */
 .blog-grid {
   display: grid;

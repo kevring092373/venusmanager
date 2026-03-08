@@ -34,29 +34,44 @@
   </header>
 
   <main>
-    <section class="page-header">
+    <section class="page-header page-header--compact">
       <div class="container">
         <h1>Anfrage senden</h1>
         <p>Unverbindlich und diskret. Wir melden uns zeitnah bei dir.</p>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section section--compact">
       <div class="container container--narrow">
-        <form class="form-submit" action="#" method="post" id="anfrage-form">
+        <form class="form-submit" name="anfrage" method="post" data-netlify="true" netlify-honeypot="website" id="anfrage-form">
+          <input type="hidden" name="form-name" value="anfrage">
+          <input type="hidden" name="subject" value="Neue Anfrage – Venus Manager">
+          <p class="hidden" aria-hidden="true">
+            <label>Nicht ausfüllen (Spam-Schutz): <input name="website" tabindex="-1" autocomplete="off"></label>
+          </p>
           <div class="form-row">
             <div class="form-group">
               <label for="vorname">Vorname *</label>
               <input type="text" id="vorname" name="vorname" required>
             </div>
             <div class="form-group">
-              <label for="nachname">Nachname *</label>
-              <input type="text" id="nachname" name="nachname" required>
+              <label for="nachname">Nachname</label>
+              <input type="text" id="nachname" name="nachname">
             </div>
           </div>
           <div class="form-group">
             <label for="email">E-Mail *</label>
             <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="alter">Alter</label>
+              <input type="number" id="alter" name="alter" min="18" max="120" placeholder="Optional">
+            </div>
+            <div class="form-group">
+              <label for="telefon">Telefonnummer</label>
+              <input type="tel" id="telefon" name="telefon" placeholder="Optional">
+            </div>
           </div>
           <div class="form-group">
             <label for="betreff">Betreff / Interesse</label>
@@ -69,14 +84,8 @@
             </select>
           </div>
           <div class="form-group">
-            <label for="nachricht">Nachricht *</label>
-            <textarea id="nachricht" name="nachricht" required placeholder="Erzähl uns kurz von dir und deinen Zielen …"></textarea>
-          </div>
-          <div class="form-group">
-            <label>
-              <input type="checkbox" name="datenschutz" required>
-              Ich habe die <a href="datenschutz.html" target="_blank" rel="noopener">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu. *
-            </label>
+            <label for="nachricht">Nachricht</label>
+            <textarea id="nachricht" name="nachricht" placeholder="Erzähl uns kurz von dir und deinen Zielen … (optional)"></textarea>
           </div>
           <div class="form-submit">
             <button type="submit" class="btn btn--primary btn--lg">Anfrage absenden</button>
