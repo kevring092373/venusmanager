@@ -1,0 +1,10 @@
+# Venus Manager – statische Website, kein Build-Schritt
+[build]
+  publish = "."
+  command = ""
+
+# Optional: 404-Seite (falls du später eine eigene 404.html anlegst)
+# [[redirects]]
+#   from = "/*"
+#   to = "/404.html"
+#   status = 404
