@@ -43,8 +43,16 @@
 
     <section class="section section--compact">
       <div class="container container--narrow" id="anfrage-container">
-        <div id="anfrage-success" class="hidden" role="status" aria-live="polite">
-          <p class="text-large">Vielen Dank für deine Anfrage. Wir melden uns in Kürze bei dir.</p>
+        <div id="anfrage-success" class="form-success hidden" role="status" aria-live="polite">
+          <div class="form-success__icon" aria-hidden="true">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="2" fill="none"/>
+              <path d="M14 24l8 8 12-16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            </svg>
+          </div>
+          <h2 class="form-success__title">Anfrage angekommen</h2>
+          <p class="form-success__text">Vielen Dank für deine Nachricht. Wir melden uns in Kürze bei dir.</p>
+          <a href="index.html" class="btn btn--primary">Zurück zur Startseite</a>
         </div>
         <form class="form-submit" name="anfrage" method="post" data-netlify="true" netlify-honeypot="website" id="anfrage-form">
           <input type="hidden" name="form-name" value="anfrage">
@@ -80,10 +88,10 @@
             <label for="betreff">Betreff / Interesse</label>
             <select id="betreff" name="betreff">
               <option value="">Bitte wählen</option>
-              <option value="starter">Einstieg / Starter</option>
-              <option value="growth">Wachstum / Growth</option>
-              <option value="full">Full Management</option>
-              <option value="sonstiges">Sonstiges / Beratung</option>
+              <option value="einstieg-starter">Einstieg / Starter</option>
+              <option value="allgemein">Allgemeine Kontaktanfrage</option>
+              <option value="spezielle-fragen">Spezielle Fragen</option>
+              <option value="sonstiges">Sonstiges</option>
             </select>
           </div>
           <div class="form-group">
