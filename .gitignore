@@ -1,0 +1,15 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Optional: wenn du später Node nutzt
+# node_modules/
+# .env
+# .env.local
