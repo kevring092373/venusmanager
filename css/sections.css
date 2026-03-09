@@ -57,6 +57,17 @@
   padding: var(--space-lg) var(--space-xl);
   font-size: var(--text-base);
 }
+@media (max-width: 768px) {
+  .hero-actions .btn {
+    padding: var(--space-md) var(--space-lg);
+    font-size: var(--text-sm);
+  }
+}
+@media (max-width: 480px) {
+  .hero-actions .btn {
+    padding: var(--space-sm) var(--space-md);
+  }
+}
 .hero-actions .btn--secondary {
   border-color: rgba(255,255,255,0.4);
   color: #fff;
@@ -491,6 +502,24 @@
 }
 @keyframes umsatz-area-fade {
   to { opacity: 1; }
+}
+
+/* Mobile + Reduced Motion: Animationen verkürzen */
+@media (max-width: 768px), (prefers-reduced-motion: reduce) {
+  .of-chart-line {
+    animation-duration: 0.5s;
+  }
+  .of-chart-area {
+    animation-duration: 0.5s;
+    animation-delay: 0.05s;
+  }
+  .umsatz-panel__chart-line {
+    animation-duration: 0.5s;
+  }
+  .umsatz-panel__chart-area {
+    animation-duration: 0.5s;
+    animation-delay: 0.05s;
+  }
 }
 @media (max-width: 640px) {
   .umsatz-panel {

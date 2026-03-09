@@ -37,6 +37,30 @@ main {
   }
 }
 
+/* Mobile: schnelleres Rendering unterhalb des Folds */
+@media (max-width: 768px) {
+  .section {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 400px;
+  }
+  .hero + .section,
+  .hero + .section + .section {
+    content-visibility: visible;
+    contain-intrinsic-size: none;
+  }
+}
+
+/* Touch: schnellere Reaktion auf Mobile */
+@media (hover: none) and (pointer: coarse) {
+  .btn,
+  a,
+  .nav-toggle,
+  .faq-question {
+    -webkit-tap-highlight-color: rgba(186, 144, 67, 0.2);
+    touch-action: manipulation;
+  }
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -214,16 +238,27 @@ h3 { font-size: var(--text-2xl); }
 
 @media (max-width: 768px) {
   .btn {
-    min-height: 44px;
-    padding: var(--space-md) var(--space-lg);
+    min-height: 40px;
+    padding: var(--space-sm) var(--space-lg);
+    font-size: var(--text-sm);
   }
   .btn--lg {
-    min-height: 48px;
-    padding: var(--space-lg) var(--space-xl);
-    font-size: var(--text-base);
+    min-height: 42px;
+    padding: var(--space-md) var(--space-lg);
+    font-size: var(--text-sm);
   }
 }
 @media (max-width: 480px) {
+  .btn {
+    min-height: 38px;
+    padding: var(--space-xs) var(--space-md);
+    font-size: var(--text-sm);
+  }
+  .btn--lg {
+    min-height: 40px;
+    padding: var(--space-sm) var(--space-md);
+    font-size: var(--text-sm);
+  }
   .hero-actions .btn--lg,
   .cta-block .btn {
     width: 100%;
