@@ -205,11 +205,11 @@
 .of-chart-line {
   stroke-dasharray: 380;
   stroke-dashoffset: 380;
-  animation: of-line-draw 2s ease-out forwards;
+  animation: of-line-draw 1.2s ease-out forwards;
 }
 .of-chart-area {
   opacity: 0;
-  animation: of-area-fade 2s ease-out 0.2s forwards;
+  animation: of-area-fade 1.2s ease-out 0.15s forwards;
 }
 .of-chart stop:first-child { stop-color: var(--color-primary-light); stop-opacity: 0.4; }
 .of-chart stop:last-child { stop-color: var(--color-primary); stop-opacity: 0; }
@@ -478,13 +478,13 @@
 .umsatz-panel__chart-area {
   vector-effect: non-scaling-stroke;
   opacity: 0;
-  animation: umsatz-area-fade 2s ease-out 0.2s forwards;
+  animation: umsatz-area-fade 1.2s ease-out 0.15s forwards;
 }
 .umsatz-panel__chart-line {
   vector-effect: non-scaling-stroke;
   stroke-dasharray: 620;
   stroke-dashoffset: 620;
-  animation: umsatz-line-draw 2s ease-out forwards;
+  animation: umsatz-line-draw 1.2s ease-out forwards;
 }
 @keyframes umsatz-line-draw {
   to { stroke-dashoffset: 0; }
@@ -494,20 +494,64 @@
 }
 @media (max-width: 640px) {
   .umsatz-panel {
-    padding: var(--space-xl);
+    padding: var(--space-lg);
+    border-radius: var(--radius-lg);
+  }
+  .umsatz-panel__title {
+    font-size: var(--text-xl);
+    margin-bottom: var(--space-lg);
   }
   .umsatz-panel__months {
-    grid-template-columns: repeat(3, 1fr);
-    margin-bottom: var(--space-xl);
+    display: flex;
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+    overflow-x: auto;
+    padding-bottom: var(--space-sm);
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+  .umsatz-panel__months::-webkit-scrollbar {
+    height: 6px;
+  }
+  .umsatz-panel__months::-webkit-scrollbar-thumb {
+    background: var(--color-border);
+    border-radius: 3px;
+  }
+  .umsatz-panel__month {
+    flex: 0 0 120px;
+    min-width: 120px;
+    padding: var(--space-md);
   }
   .umsatz-panel__sum {
     font-size: var(--text-base);
   }
+  .umsatz-panel__label {
+    font-size: var(--text-xs);
+  }
+  .umsatz-panel__chart-wrap {
+    padding: var(--space-md);
+  }
   .umsatz-panel__chart-inner {
-    min-height: 220px;
+    min-height: 200px;
   }
   .umsatz-panel__chart {
-    min-height: 180px;
+    min-height: 160px;
+  }
+  .umsatz-panel__y-label {
+    font-size: var(--text-xs);
+  }
+  .umsatz-panel__x-label {
+    margin-top: var(--space-2xl);
+  }
+}
+@media (max-width: 380px) {
+  .umsatz-panel__month {
+    flex: 0 0 100px;
+    min-width: 100px;
+    padding: var(--space-sm);
+  }
+  .umsatz-panel__sum {
+    font-size: var(--text-sm);
   }
 }
 
