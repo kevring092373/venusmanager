@@ -59,6 +59,16 @@
     });
   });
 
+  // VM-Article FAQ (OnlyFans Agentur Artikel)
+  document.querySelectorAll('.vm-faq-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var item = btn.closest('.vm-faq-item');
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.vm-faq-item.open').forEach(function (el) { el.classList.remove('open'); });
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
   // Cookie-Banner (notwendige Cookies)
   var COOKIE_CONSENT_KEY = 'venus_cookie_consent';
   var banner = document.getElementById('cookie-banner');
