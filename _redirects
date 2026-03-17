@@ -1,0 +1,14 @@
+# Prefer .html URLs (existing internal links use .html)
+/:page  /:page.html  301
+
+# Specific directory pages
+/leistungen/:page  /leistungen/:page.html  301
+
+# Canonicalize homepage
+/index.html  /  301
+/index  /  301
+
+# Blog slugs without .html
+/onlyfans-starten  /onlyfans-starten.html  301
+/onlyfans-geld-verdienen  /onlyfans-geld-verdienen.html  301
+/onlyfans-geld-verdienen-steuern  /onlyfans-geld-verdienen-steuern.html  301
