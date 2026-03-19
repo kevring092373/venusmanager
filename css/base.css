@@ -134,6 +134,8 @@ h3 { font-size: var(--text-2xl); }
   .section {
     padding-top: var(--space-3xl);
     padding-bottom: var(--space-3xl);
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 900px;
   }
   .hero + .section {
     padding-top: var(--space-2xl);
