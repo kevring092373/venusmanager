@@ -8,6 +8,8 @@
   max-width: 780px;
   margin: 0 auto;
   padding: 48px 24px 90px;
+  overflow-wrap: anywhere;
+  word-wrap: break-word;
 }
 
 /* Breadcrumb wie seomuenchen.com */
@@ -264,6 +266,7 @@
   font-size: 14.5px;
   text-decoration: none;
   transition: color 0.2s;
+  overflow-wrap: anywhere;
 }
 .vm-toc a:hover { color: var(--color-primary); }
 
@@ -443,6 +446,7 @@
   gap: 14px;
   font-size: 15px;
   color: var(--color-text-muted);
+  min-width: 0;
 }
 .vm-blog .vm-check-card .dot {
   flex-shrink: 0;
@@ -540,6 +544,7 @@
   display: flex;
   gap: 14px;
   align-items: flex-start;
+  min-width: 0;
 }
 .vm-blog .vm-error-card .enum {
   flex-shrink: 0;
@@ -599,6 +604,16 @@
   position: absolute;
   left: 0;
   color: var(--color-text-muted);
+}
+
+/* Prevent long URLs/words from overflowing on small screens */
+.vm-blog p,
+.vm-blog li,
+.vm-blog a,
+.vm-blog td,
+.vm-blog th,
+.vm-blog .vm-faq-btn span {
+  overflow-wrap: anywhere;
 }
 
 /* FAQ (Blog-Post) */
@@ -687,6 +702,16 @@
 
 @media (max-width: 560px) {
   .vm-blog { padding: 32px 20px 60px; }
+  .vm-blog .vm-toc { padding: 20px 18px; }
+  .vm-blog .vm-step { padding: 16px; }
+  .vm-blog .vm-error-card { padding: 16px; }
+  .vm-blog .vm-fazit { padding: 22px 18px; }
+  .vm-blog .vm-table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+  }
   .vm-blog .vm-stats { grid-template-columns: 1fr 1fr; }
   .vm-blog .vm-expense-grid { grid-template-columns: 1fr; }
   .vm-blog .vm-cta { padding: 32px 20px; }
