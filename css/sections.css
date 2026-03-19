@@ -3,7 +3,7 @@
   min-height: 82vh;
   display: flex;
   align-items: center;
-  background: #1a1a1a url("../images/Venus 1.webp") center / cover no-repeat;
+  background: #1a1a1a;
   position: relative;
   overflow: hidden;
 }
@@ -13,6 +13,11 @@
   inset: 0;
   background: linear-gradient(145deg, rgba(26, 26, 26, 0.85) 0%, rgba(36, 36, 36, 0.75) 50%, rgba(30, 30, 30, 0.85) 100%);
   pointer-events: none;
+}
+@media (min-width: 769px) {
+  .hero {
+    background: #1a1a1a url("../images/Venus 1.webp") center / cover no-repeat;
+  }
 }
 .hero::after {
   content: "";
@@ -1434,8 +1439,13 @@
 /* Section mit Hintergrund Venus 2 (unter „Ein paar Einblicke“) */
 .section--bg-venus2 {
   position: relative;
-  background: #1a1a1a url("../images/Venus 2.webp") center / cover no-repeat;
+  background: #1a1a1a;
   color: #fff;
+}
+@media (min-width: 769px) {
+  .section--bg-venus2 {
+    background: #1a1a1a url("../images/Venus 2.webp") center / cover no-repeat;
+  }
 }
 .section--bg-venus2 .container {
   position: relative;
