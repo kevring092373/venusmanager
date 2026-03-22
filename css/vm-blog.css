@@ -571,6 +571,107 @@
   font-size: 15px;
 }
 
+/* Numbered steps: optional h3 + p block */
+.vm-blog .vm-step .vm-step-body h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0 0 6px;
+  font-family: inherit;
+}
+.vm-blog .vm-step .vm-step-body p {
+  color: var(--color-text-muted);
+  margin: 0;
+  font-size: 15px;
+}
+
+/* Marketing channel cards (OnlyFans-Start Guide) */
+.vm-blog .vm-channel-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 24px 0;
+}
+.vm-blog .vm-channel-card {
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 20px;
+  min-width: 0;
+}
+.vm-blog .vm-channel-card .ch-name {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+}
+.vm-blog .vm-channel-card p {
+  color: var(--color-text-muted);
+  font-size: 14.5px;
+  margin: 0;
+}
+
+/* Price comparison cards */
+.vm-blog .vm-price-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 20px 0;
+}
+.vm-blog .vm-price-card {
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 18px;
+  position: relative;
+  overflow: hidden;
+  min-width: 0;
+}
+.vm-blog .vm-price-card.featured {
+  border-color: var(--color-primary);
+}
+.vm-blog .vm-price-card.featured::after {
+  content: 'Empfohlen';
+  position: absolute;
+  top: 10px;
+  right: -20px;
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 3px 28px;
+  transform: rotate(35deg);
+}
+.vm-blog .vm-price-card .pc-title {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+}
+.vm-blog .vm-price-card .pc-price {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  color: var(--color-text);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.vm-blog .vm-price-card p {
+  color: var(--color-text-muted);
+  font-size: 14px;
+  margin: 0;
+}
+
+.vm-blog .vm-tl-block li strong {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
 /* Expense grid */
 .vm-blog .vm-expense-grid {
   display: grid;
@@ -714,5 +815,7 @@
   }
   .vm-blog .vm-stats { grid-template-columns: 1fr 1fr; }
   .vm-blog .vm-expense-grid { grid-template-columns: 1fr; }
+  .vm-blog .vm-channel-grid { grid-template-columns: 1fr; }
+  .vm-blog .vm-price-grid { grid-template-columns: 1fr; }
   .vm-blog .vm-cta { padding: 32px 20px; }
 }
