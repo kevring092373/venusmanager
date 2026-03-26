@@ -949,6 +949,272 @@
 }
 .vm-blog .vm-btn:hover { opacity: 0.9; }
 
+/* OnlyFans Chatting Tipps (DMs): Custom Components */
+.vm-blog .vm-stats--4 { grid-template-columns: repeat(4, 1fr); }
+
+/* Anatomy / Schritt-By-Schritt Cards */
+.vm-blog .vm-anatomy { margin: 24px 0; }
+.vm-blog .vm-anatomy-step {
+  display: flex;
+  gap: 16px;
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 14px 18px;
+  margin-bottom: 12px;
+  align-items: flex-start;
+  min-width: 0;
+}
+.vm-blog .vm-anatomy-step:last-child { margin-bottom: 0; }
+.vm-blog .vm-anatomy-step .an {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  background: var(--color-primary-subtle);
+  border: 1px solid rgba(186, 144, 67, 0.35);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+.vm-blog .vm-anatomy-step p { color: var(--color-text-muted); margin: 0; font-size: 15px; }
+.vm-blog .vm-anatomy-step strong { color: var(--color-text); font-weight: 600; }
+
+/* Templates (Templates für Willkommensnachrichten) */
+.vm-blog .vm-templates { display: grid; gap: 12px; margin: 20px 0; }
+.vm-blog .vm-template {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.vm-blog .vm-template-label {
+  background: var(--color-bg-alt);
+  border-bottom: 1px solid var(--color-border);
+  padding: 10px 18px;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.vm-blog .vm-template-body {
+  padding: 16px 18px;
+  font-size: 15px;
+  color: var(--color-text-muted);
+  font-style: italic;
+  line-height: 1.7;
+}
+
+/* 70/30 Ratio */
+.vm-blog .vm-ratio {
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 22px 24px;
+  margin: 24px 0;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.vm-blog .vm-ratio-bar {
+  flex: 1;
+  height: 12px;
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+}
+.vm-blog .vm-ratio-bar .r1 { background: var(--color-primary); }
+.vm-blog .vm-ratio-bar .r2 { background: var(--color-bg-alt); }
+.vm-blog .vm-ratio-labels { display: flex; gap: 20px; flex-wrap: wrap; font-size: 13px; }
+.vm-blog .vm-ratio-label { display: flex; align-items: center; gap: 6px; color: var(--color-text-muted); }
+.vm-blog .vm-ratio-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+
+/* PPV Example */
+.vm-blog .vm-example {
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-primary);
+  border-radius: 4px;
+  padding: 18px 22px;
+  margin: 20px 0;
+}
+.vm-blog .vm-example-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-muted);
+  margin-bottom: 10px;
+}
+.vm-blog .vm-example p { font-size: 15px; color: var(--color-text-muted); font-style: italic; margin: 0; line-height: 1.7; }
+
+/* Price span inside tables */
+.vm-blog .vm-table .price {
+  font-family: 'Playfair Display', serif;
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* KI / Can/Cant Cards */
+.vm-blog .vm-ki-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 20px 0; }
+.vm-blog .vm-ki-card {
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 20px;
+  min-width: 0;
+}
+.vm-blog .vm-ki-card .kc-title {
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-primary);
+  margin-bottom: 12px;
+}
+.vm-blog .vm-ki-card .kc-title { display: block; }
+.vm-blog .vm-ki-card.cant .kc-title { color: #c04040; }
+.vm-blog .vm-ki-card ul { list-style: none; padding: 0; margin: 0; }
+.vm-blog .vm-ki-card li {
+  font-size: 14.5px;
+  color: var(--color-text-muted);
+  padding: 4px 0 4px 16px;
+  position: relative;
+}
+.vm-blog .vm-ki-card.can li::before { content: '✓'; position: absolute; left: 0; color: #2d8a5e; font-size: 12px; font-weight: 700; }
+.vm-blog .vm-ki-card.cant li::before { content: '✗'; position: absolute; left: 0; color: #c04040; font-size: 12px; font-weight: 700; }
+
+/* Whale Rules */
+.vm-blog .vm-whale-rules { display: grid; gap: 10px; margin: 20px 0; }
+.vm-blog .vm-whale-rule {
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-primary);
+  border-radius: 6px;
+  padding: 16px 20px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  min-width: 0;
+}
+.vm-blog .vm-whale-rule .wn {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  background: var(--color-primary-subtle);
+  border: 1px solid rgba(184, 135, 58, 0.35);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+.vm-blog .vm-whale-rule h3 { font-size: 0.9rem; color: var(--color-text); margin: 0 0 4px; }
+.vm-blog .vm-whale-rule p { color: var(--color-text-muted); font-size: 15px; margin: 0; }
+
+/* Einwände Cards */
+.vm-blog .vm-einwaende { display: grid; gap: 12px; margin: 20px 0; }
+.vm-blog .vm-einwand {
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.vm-blog .vm-einwand-q {
+  background: var(--color-surface);
+  padding: 13px 18px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text);
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.vm-blog .vm-einwand-q .qi {
+  width: 22px;
+  height: 22px;
+  background: rgba(212, 80, 80, 0.07);
+  border: 1px solid rgba(212, 80, 80, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c04040;
+  font-size: 13px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.vm-blog .vm-einwand-strategy {
+  padding: 5px 18px 0;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.vm-blog .vm-einwand-answer {
+  padding: 8px 18px 16px;
+  font-size: 14.5px;
+  color: var(--color-text-muted);
+  font-style: italic;
+  line-height: 1.7;
+}
+.vm-blog .vm-einwand-tip {
+  padding: 0 18px 14px;
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+/* Daily Workflow Blocks */
+.vm-blog .vm-workflow { margin: 24px 0; }
+.vm-blog .vm-wf-block {
+  border-left: 2px solid var(--color-border);
+  padding: 0 0 28px 24px;
+  position: relative;
+}
+.vm-blog .vm-wf-block:last-child { padding-bottom: 0; }
+.vm-blog .vm-wf-block::before {
+  content: '';
+  position: absolute;
+  left: -5px;
+  top: 6px;
+  width: 8px;
+  height: 8px;
+  background: var(--color-primary);
+  border-radius: 50%;
+  border: 2px solid var(--color-bg-alt);
+}
+.vm-blog .vm-wf-time {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+}
+.vm-blog .vm-wf-block ul { list-style: none; padding-left: 0; margin: 0; }
+.vm-blog .vm-wf-block li {
+  font-size: 15px;
+  color: var(--color-text-muted);
+  padding: 3px 0 3px 14px;
+  position: relative;
+}
+.vm-blog .vm-wf-block li::before {
+  content: '–';
+  position: absolute;
+  left: 0;
+  color: var(--color-text-muted);
+}
+.vm-blog .vm-wf-block li strong { color: var(--color-text); font-weight: 600; }
+
 @media (max-width: 560px) {
   .vm-blog { padding: 32px 20px 60px; }
   .vm-blog .vm-toc { padding: 20px 18px; }
@@ -962,9 +1228,13 @@
     white-space: nowrap;
   }
   .vm-blog .vm-stats { grid-template-columns: 1fr 1fr; }
+  .vm-blog .vm-stats--4 { grid-template-columns: 1fr 1fr; }
   .vm-blog .vm-expense-grid { grid-template-columns: 1fr; }
   .vm-blog .vm-channel-grid { grid-template-columns: 1fr; }
   .vm-blog .vm-price-grid { grid-template-columns: 1fr; }
   .vm-blog .vm-services { grid-template-columns: 1fr; }
+  .vm-blog .vm-ki-grid { grid-template-columns: 1fr; }
+  .vm-blog .vm-whale-rules { grid-template-columns: 1fr; }
+  .vm-blog .vm-einwaende { grid-template-columns: 1fr; }
   .vm-blog .vm-cta { padding: 32px 20px; }
 }
