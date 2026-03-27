@@ -1215,6 +1215,208 @@
 }
 .vm-blog .vm-wf-block li strong { color: var(--color-text); font-weight: 600; }
 
+/* Mit OnlyFans Geld verdienen (Guide): Hero-Stats, Quellen, Stages, Faktoren, Link-Block */
+.vm-blog .vm-stats-hero {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin: 28px 0 36px;
+}
+.vm-blog .vm-stat-hero {
+  background: var(--color-dark);
+  border-radius: 8px;
+  padding: 22px 16px;
+  text-align: center;
+  min-width: 0;
+}
+.vm-blog .vm-stat-hero .n {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.9rem;
+  color: var(--color-primary);
+  display: block;
+  line-height: 1;
+}
+.vm-blog .vm-stat-hero .l {
+  font-size: 11.5px;
+  color: #a09888;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-top: 8px;
+}
+.vm-blog .vm-sources { display: grid; gap: 10px; margin: 20px 0; }
+.vm-blog .vm-source {
+  display: flex;
+  gap: 16px;
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 18px 20px;
+  align-items: flex-start;
+  min-width: 0;
+}
+.vm-blog .vm-source .snum {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  background: var(--color-primary-subtle);
+  border: 1px solid var(--color-primary-subtle-strong);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+.vm-blog .vm-source-body h3 {
+  font-size: 0.95rem;
+  color: var(--color-text);
+  margin: 0 0 5px;
+  font-family: inherit;
+}
+.vm-blog .vm-source-body p {
+  color: var(--color-text-muted);
+  font-size: 15px;
+  margin: 0;
+}
+.vm-blog .vm-stages {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 24px 0;
+}
+.vm-blog .vm-stage {
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  min-width: 0;
+}
+.vm-blog .vm-stage::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+}
+.vm-blog .vm-stage.s1::after { background: var(--color-border); }
+.vm-blog .vm-stage.s2::after { background: var(--color-primary); }
+.vm-blog .vm-stage.s3::after {
+  background: linear-gradient(90deg, var(--color-primary), #c9a96e);
+}
+.vm-blog .vm-stage .st-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  margin-bottom: 8px;
+}
+.vm-blog .vm-stage .st-range {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  color: var(--color-primary);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.vm-blog .vm-stage p {
+  font-size: 13.5px;
+  color: var(--color-text-muted);
+  margin: 0;
+  line-height: 1.6;
+}
+.vm-blog .vm-factors { display: grid; gap: 10px; margin: 20px 0; }
+.vm-blog .vm-factor {
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 18px 20px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  min-width: 0;
+}
+.vm-blog .vm-factor .fi {
+  flex-shrink: 0;
+  width: 10px;
+  height: 10px;
+  background: var(--color-primary);
+  border-radius: 50%;
+  margin-top: 8px;
+}
+.vm-blog .vm-factor h3 {
+  font-size: 0.9rem;
+  color: var(--color-text);
+  margin: 0 0 4px;
+  font-family: inherit;
+}
+.vm-blog .vm-factor p {
+  color: var(--color-text-muted);
+  font-size: 15px;
+  margin: 0;
+}
+.vm-blog .vm-time-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 20px 0;
+}
+.vm-blog .vm-time-card {
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 18px;
+  text-align: center;
+  min-width: 0;
+}
+.vm-blog .vm-time-card .tc-icon { font-size: 1.4rem; margin-bottom: 8px; }
+.vm-blog .vm-time-card .tc-val {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  color: var(--color-primary);
+  font-weight: 700;
+}
+.vm-blog .vm-time-card .tc-label {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-top: 5px;
+}
+.vm-blog .vm-link-block {
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 18px 22px;
+  margin: 24px 0;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  min-width: 0;
+}
+.vm-blog .vm-link-block .lb-icon {
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  background: var(--color-primary-subtle);
+  border: 1px solid var(--color-primary-subtle-strong);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  font-size: 16px;
+  font-weight: 700;
+}
+.vm-blog .vm-link-block p {
+  margin: 0;
+  font-size: 15px;
+  color: var(--color-text-muted);
+}
+
 @media (max-width: 560px) {
   .vm-blog { padding: 32px 20px 60px; }
   .vm-blog .vm-toc { padding: 20px 18px; }
@@ -1236,5 +1438,8 @@
   .vm-blog .vm-ki-grid { grid-template-columns: 1fr; }
   .vm-blog .vm-whale-rules { grid-template-columns: 1fr; }
   .vm-blog .vm-einwaende { grid-template-columns: 1fr; }
+  .vm-blog .vm-stats-hero,
+  .vm-blog .vm-stages,
+  .vm-blog .vm-time-grid { grid-template-columns: 1fr 1fr; }
   .vm-blog .vm-cta { padding: 32px 20px; }
 }
